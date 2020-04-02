@@ -6,6 +6,7 @@ const customersDataAccess = require("../DataAccess/CustomersDataAccess")
 //CREATE
 router.post('/', async (req, res) => {
     const newCustomer = req.body
+    console.log('newCustomer', newCustomer)
 
     const createdCustomer = await customersDataAccess.createNewCustomer(newCustomer)
 
